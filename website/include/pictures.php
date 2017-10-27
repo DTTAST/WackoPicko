@@ -29,11 +29,8 @@ class Pictures
    }
    function get_some_pictures_by_user($userid, $not_this, $limit)
    {
-      $query = sprintf("SELECT pictures.filename, pictures.id, pictures.user_id, users.login from pictures, users where pictures.id != '%d' and pictures.user_id = '%d' and pictures.user_id = users.id order by RAND() limit %d;",
-		       mysql_real_escape_string($not_this),
-		       mysql_real_escape_string($userid),
-		       mysql_real_escape_string($limit));
-      $res = mysql_query($query);
+      $res=1;
+      
       if ($res)
       {
 	 while ($row = mysql_fetch_assoc($res))
