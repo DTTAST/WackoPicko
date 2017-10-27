@@ -10,7 +10,8 @@ function http_redirect($url)
 
 function error_404()
 {
-   header("HTTP/1.1 404 Not Found", True, 404);
+   //Remove this line for testing SSC. Dont use.
+   //header("HTTP/1.1 404 Not Found", True, 404);
    exit(0);
 }
 
